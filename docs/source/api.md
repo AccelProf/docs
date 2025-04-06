@@ -1,7 +1,5 @@
-API
-===
+# API
 
-.. autosummary::
-   :toctree: generated
+## Modules
 
-   lumache
+- [lumache](generated/lumache.md)

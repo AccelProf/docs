@@ -1,34 +1,46 @@
-Usage
-=====
+# Usage
 
-.. _installation:
-
-Installation
-------------
+## Installation
 
 To use Lumache, first install it using pip:
 
-.. code-block:: console
+```bash
+(.venv) $ pip install lumache
+```
 
-   (.venv) $ pip install lumache
-
-Creating recipes
-----------------
+## Creating recipes
 
 To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+you can use the `lumache.get_random_ingredients()` function:
 
-.. autofunction:: lumache.get_random_ingredients
+```python
+def get_random_ingredients(kind=None):
+    """
+    Return a list of random ingredients as strings.
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
+    :param kind: Optional "kind" of ingredients.
+    :type kind: list[str] or None
+    :raise lumache.InvalidKindError: If the kind is invalid.
+    :return: The ingredients list.
+    :rtype: list[str]
+    """
+```
+
+The `kind` parameter should be either `"meat"`, `"fish"`,
+or `"veggies"`. Otherwise, `lumache.get_random_ingredients()`
 will raise an exception.
 
-.. autoexception:: lumache.InvalidKindError
+```python
+class InvalidKindError(Exception):
+    """Raised if the kind is invalid."""
+    pass
+```
 
 For example:
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+```python
+import lumache
+lumache.get_random_ingredients()
+# ['shells', 'gorgonzola', 'parsley']
+```
 
