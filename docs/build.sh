@@ -3,5 +3,5 @@
 # pip install sphinx-autobuild
 
 # build
-sphinx-build -b html docs/source/ build/html
-sphinx-autobuild docs/source/ build/html
+sphinx-build -b html source/ build/html
+sphinx-autobuild source/ build/html
