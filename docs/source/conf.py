@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'AccelProf'
+copyright = '2025, Mao Lin'
+author = 'Mao Lin'
 
 release = '0.1'
 version = '0.1.0'
@@ -30,7 +30,6 @@ templates_path = ['_templates']
 
 source_suffix = {
     '.rst': 'restructuredtext',
-    '.txt': 'markdown',
     '.md': 'markdown',
 }
 
